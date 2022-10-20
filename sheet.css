@@ -1,0 +1,123 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+body
+{
+    width: 100%;
+    height: 100vh;
+    
+}
+header
+{
+    font-size: 26px;
+    text-align: center;
+    padding: 20px 0;
+}
+.side-bar
+{
+    position: fixed;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: linear-gradient(0,#369fe5,#1ABC9C, #2471A3,
+    #1F618D,
+    #1A5276);
+    border-radius: 4px;
+    overflow: hidden;
+    transition: .4s ease;
+}
+.side-bar ul{
+    list-style: none;
+    width: 100%;
+}
+/****************************/
+.side-bar ul li 
+{
+    padding: 10px 10px;
+    border-bottom: 1px solid black;
+    transition: .2s ease-in-out;
+}
+.side-bar ul li:hover{
+    transform: translateX(10px);
+    background-color: black;
+    border-radius: 5px;
+}
+/**************************/
+.side-bar ul li  i {
+    color: white;
+    margin: 0 20px;
+}
+.side-bar ul li a {
+    text-decoration: none;
+    color: white;
+}
+/*********check-box***********/
+#check
+{
+    display: none;
+}
+label #cancel
+{
+    position: absolute;
+    cursor: pointer;
+    left: 215px;
+    top: -30px;
+    font-size: 20px;
+    background-color: transparent;
+    color: white;
+    padding: 5px 9px;
+    border-radius: 10px;
+    z-index: 111;
+    transition: all .3s ease;
+}
+label #btn
+{
+    position: absolute;
+    cursor: pointer;
+    top: 30px;
+    left: 30px;
+    font-size: 20px;
+    color: white;
+    padding: 7px 9px;
+    border-radius: 50%;
+    background-color: black;
+    transition: all .4s ease;
+    opacity: 1;
+}
+#check:checked ~ .side-bar
+{
+    left: 0;
+}
+#check:checked ~ label #btn
+{
+    margin-left: 200px;
+    opacity: 0;
+}
+#check:checked ~ label #cancel
+{
+    top: 20px;
+}
+.right-bar
+{
+    background: url(/images/pexels-photo-593322.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    transition: all .4s ease;
+}
+#check:checked ~ .right-bar
+{
+    margin-left: 250px;
+}
+.main
+{
+    width: 100%;
+    height: 100vh;
+    background-color: red;
+}
+
